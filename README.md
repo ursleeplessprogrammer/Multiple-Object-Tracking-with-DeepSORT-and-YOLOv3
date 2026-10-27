@@ -26,6 +26,7 @@ Pre-processing: Image resizing (416x416), normalization, and padding.
 
 Detection: YOLOv3 generates bounding boxes and class probabilities.
 
+
 Tracking (DeepSORT):
 
 Feature extraction from detected bounding boxes.
