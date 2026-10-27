@@ -9,44 +9,39 @@ The primary goal of this project is to create a robust system capable of not onl
 I utilized the KITTI-Road-Segmentation dataset for theory and training context, focusing on urban environments.
 
 ## 🚀 Key Features
-Object Detection: Implemented using YOLOv3 (You Only Look Once v3) with a Darknet-53 backbone.
+- Object Detection: Implemented using YOLOv3 (You Only Look Once v3) with a Darknet-53 backbone.
 
-Backbone Modification: Added 3 additional layers to the YOLOv3 backbone to enhance the extraction of abstract and complex features, improving detection reliability without causing overfitting.
+- Backbone Modification: Added 3 additional layers to the YOLOv3 backbone to enhance the extraction of abstract and complex features, improving detection reliability without causing overfitting.
 
-Object Tracking: Integrated DeepSORT, which utilizes:
-
-Kalman Filter: To predict the future position of objects.
-
-Hungarian Algorithm: For data association and matching.
-
-Deep Association Metric: Using cosine distance to identify objects based on unique visual features.
+- Object Tracking: Integrated DeepSORT, which utilizes:
+  - Kalman Filter: To predict the future position of objects.
+  - Hungarian Algorithm: For data association and matching.
+  - Deep Association Metric: Using cosine distance to identify objects based on unique visual features.
 
 ## 📊 Methodology
-Pre-processing: Image resizing (416x416), normalization, and padding.
-
-Detection: YOLOv3 generates bounding boxes and class probabilities.
-
-
-Tracking (DeepSORT):
-
-Feature extraction from detected bounding boxes.
-
-Motion prediction via Kalman Filter.
-
-Matching detections to existing tracks using appearance descriptors and IoU (Intersection over Union).
+1. Pre-processing: Image resizing (416x416), normalization, and padding.
+   
+2. Detection: YOLOv3 generates bounding boxes and class probabilities.
+   
+3. Tracking (DeepSORT):
+- Feature extraction from detected bounding boxes.
+- Motion prediction via Kalman Filter.
+- Matching detections to existing tracks using appearance descriptors and IoU (Intersection over Union).
 
 ## 🏁 Conclusion
 Based on the experiments, the combination of YOLOv3 and DeepSORT provides several advantages over standalone detection:
 
-Accurate Detection and Tracking: 
-While YOLOv3 is excellent at rapid detection, DeepSORT ensures that object identities are maintained consistently across frames, resulting in stable tracking.
+1. Accurate Detection and Tracking:
+   While YOLOv3 is excellent at rapid detection, DeepSORT ensures that object identities are maintained consistently across frames, resulting in stable tracking.
 
-Superior Object Identification: 
-DeepSORT can distinguish between similar-looking objects and handle complex scenarios like partial occlusions or objects crossing paths by using unique feature descriptors.
+2. Superior Object Identification:
+   DeepSORT can distinguish between similar-looking objects and handle complex scenarios like partial occlusions or objects crossing paths by using unique feature descriptors.
 
-Optimized Processing Speed: 
-Despite adding a tracking layer to the workflow, the system maintains a high processing speed, making it suitable for real-time applications.
-Wide Applicability: This hybrid approach is highly effective for surveillance systems, traffic analysis, and autonomous vehicle navigation.
+3. Optimized Processing Speed:
+   Despite adding a tracking layer to the workflow, the system maintains a high processing speed, making it suitable for real-time applications.
+
+4. Wide Applicability:
+   This hybrid approach is highly effective for surveillance systems, traffic analysis, and autonomous vehicle navigation.
 
 ## 🛠️ Requirements
 - Python 3.x
