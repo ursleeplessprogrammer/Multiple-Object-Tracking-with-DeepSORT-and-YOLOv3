@@ -4,7 +4,9 @@ Deep Learning Final Project that implemented DeepSORT algorithm and combined it 
 This repository contains the implementation of a Deep Learning project focused on real-time object detection and tracking. The project evaluates the performance of a standard YOLOv3 model and compares it with a Modified YOLOv3 integrated with DeepSORT (Deep Learning-based Object Tracking).
 
 ## 📌 About the Project
-The primary goal of this project is to create a robust system capable of not only detecting objects in a frame but also tracking them consistently across multiple frames in a video sequence. We utilized the KITTI-Road-Segmentation dataset for theory and training context, focusing on urban environments.
+This project was developed as final project for Deep Leaning Courses. 
+The primary goal of this project is to create a robust system capable of not only detecting objects in a frame but also tracking them consistently across multiple frames in a video sequence. 
+I utilized the KITTI-Road-Segmentation dataset for theory and training context, focusing on urban environments.
 
 ## 🚀 Key Features
 Object Detection: Implemented using YOLOv3 (You Only Look Once v3) with a Darknet-53 backbone.
