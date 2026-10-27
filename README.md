@@ -68,3 +68,8 @@ Based on the experiments, the combination of YOLOv3 and DeepSORT provides severa
 - OpenCV
 - NumPy
 - Matplotlib
+
+## 📚 References
+- Aqqa, M., et al. (2019). Understanding How Video Quality Affects Object Detection Algorithms.
+- Gao, J., et al. (2020). Deep convolutional neural networks for image-based detection.
+
