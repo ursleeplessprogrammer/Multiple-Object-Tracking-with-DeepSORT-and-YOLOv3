@@ -8,18 +8,28 @@ The primary goal of this project is to create a robust system capable of not onl
 
 ## 🚀 Key Features
 Object Detection: Implemented using YOLOv3 (You Only Look Once v3) with a Darknet-53 backbone.
+
 Backbone Modification: Added 3 additional layers to the YOLOv3 backbone to enhance the extraction of abstract and complex features, improving detection reliability without causing overfitting.
+
 Object Tracking: Integrated DeepSORT, which utilizes:
+
 Kalman Filter: To predict the future position of objects.
+
 Hungarian Algorithm: For data association and matching.
+
 Deep Association Metric: Using cosine distance to identify objects based on unique visual features.
 
 ## 📊 Methodology
 Pre-processing: Image resizing (416x416), normalization, and padding.
+
 Detection: YOLOv3 generates bounding boxes and class probabilities.
+
 Tracking (DeepSORT):
+
 Feature extraction from detected bounding boxes.
+
 Motion prediction via Kalman Filter.
+
 Matching detections to existing tracks using appearance descriptors and IoU (Intersection over Union).
 
 ## 🏁 Conclusion
