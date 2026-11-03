@@ -1,0 +1,6 @@
+numpy
+opencv-python
+scipy
+tensorflow==2.15.*
+matplotlib
+Pillow
