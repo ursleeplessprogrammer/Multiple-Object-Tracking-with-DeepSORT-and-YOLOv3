@@ -47,6 +47,51 @@ Based on testing across 30 diverse video sequences, we identified several critic
 - Classification Loss: Occasional misclassification (e.g., a car being labeled as a truck) occurs in complex visual scenes.
 - Objectness Loss: High loss is observed when the model fails to determine if a bounding box actually contains an object, particularly with very small or overlapping targets.
 
+## Files
+
+- `yolov3_model.py`: original and modified YOLOv3 Keras architectures.
+- `yolo_utils.py`: bounding boxes, YOLO output decoding, preprocessing, NMS, and drawing.
+- `weights.py`: Darknet weights loading and download helper.
+- `dataset.py`: annotation JSON parsing and dataset YAML generation.
+- `train_dataset.py`: dataset configuration and training command wrapper.
+- `video_detection.py`: YOLOv3 video detection without tracking.
+- `video_tracking.py`: modified YOLOv3 detection with DeepSORT tracking.
+- `deep_sort/`: DeepSORT detection encoder, Kalman filter, matching, track management, and preprocessing.
+
+## Dependencies
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Build the original YOLOv3 model
+
+```bash
+python build_model.py --download --weights yolov3.weights --output model.h5
+```
+
+## Build the modified YOLOv3 model
+
+```bash
+python build_model.py --modified --weights yolov3.weights --output model.h5
+```
+
+## Run video detection
+
+```bash
+python video_detection.py input.mp4 output_detection.mp4 --model model.h5
+```
+
+## Run YOLOv3 + DeepSORT
+
+Place the trained Keras detector at `model.h5` and the frozen TensorFlow re-identification graph at `model_reid.pb`, or pass their paths explicitly:
+
+```bash
+python video_tracking.py input.mp4 output_tracking.mp4 --model model.h5 --encoder model_reid.pb
+```
+
 ## 🏁 Conclusion
 Based on the experiments, the combination of YOLOv3 and DeepSORT provides several advantages over standalone detection:
 
