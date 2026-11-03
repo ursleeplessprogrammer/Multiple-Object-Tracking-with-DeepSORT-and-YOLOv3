@@ -101,7 +101,7 @@ The report presents a 30-epoch training experiment and qualitative observations 
 
 #### Training Metrics
 
-The following values are transcribed from the report's 30-epoch experiment:
+The following values are transcribed from the 30-epoch experiment:
 
 | Epoch | Precision | Recall | mAP@0.50 | mAP@0.50:0.95 |
 |---:|---:|---:|---:|---:|
