@@ -29,9 +29,9 @@ Two workflows are provided:
 1. **YOLOv3 Object Detection** — detects and classifies objects in video frames.
 2. **YOLOv3 + DeepSORT Object Tracking** — uses the detector's bounding boxes and class predictions, then associates detections over time to assign persistent track IDs.
 
-<img width="628" height="355" alt="image" src="https://github.com/user-attachments/assets/91cc4fb0-0619-4e89-941f-489a80b78cf5" />
+<img width="634" height="358" alt="image" src="https://github.com/user-attachments/assets/91cc4fb0-0619-4e89-941f-489a80b78cf5" />
 <img width="634" height="358" alt="image" src="https://github.com/user-attachments/assets/7985b9d3-8ec7-4ee8-a62b-59e0fbb967a4" />
-<img width="319" height="181" alt="image" src="https://github.com/user-attachments/assets/0dc56e1f-4ffa-4dde-bde7-ff0fd6cec3d3" />
+<img width="634" height="358" alt="image" src="https://github.com/user-attachments/assets/0dc56e1f-4ffa-4dde-bde7-ff0fd6cec3d3" />
 
 
 
